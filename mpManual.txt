@@ -1,0 +1,40 @@
+run without upload:
+'''
+mpremote run main.py
+'''
+---------
+copy to pico
+'''
+mpremote fs cp main.py :main.py
+mpremote reset
+'''
+---------
+remove file from pico
+'''
+mpremote rm main.py
+'''
+or
+'''
+mpremote rm -r libs/
+'''
+---------
+list files on pi
+'''
+mpremote fs ls
+'''
+---------
+see what else could be using the device (/dev/ttyACM0)
+'''
+lsof /dev/ttyACM0
+'''
+---------
+connect to the serial monitor
+'''
+mpremote connect auto repl
+'''
+or
+'''
+screen /dev/ttyACM0/ 115200
+'''
+---------
+
